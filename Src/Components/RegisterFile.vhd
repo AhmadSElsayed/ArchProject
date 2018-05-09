@@ -27,7 +27,7 @@ begin
 		elsif falling_edge(clock) then
 			case operation is 
 				when "000" => RegisterValue1 <= R(to_integer(unsigned(RegisterAddress1))); RegisterValue2 <= (others => 'Z');
-				when "001" => RegisterValue2 <= R(to_integer(unsigned(RegisterAddress1))); RegisterValue2 <= R(to_integer(unsigned(RegisterAddress2)));
+				when "001" => RegisterValue1<= R(to_integer(unsigned(RegisterAddress1))); RegisterValue2 <= R(to_integer(unsigned(RegisterAddress2)));
 				when others => RegisterValue1 <= (others => 'Z'); RegisterValue2 <= (others => 'Z');
 			end case;
 		end if;
