@@ -7,8 +7,8 @@ use work.Constants.all;
 
 entity execution is
 	port(
-		a, b, c : IN std_logic_vector(15 DOWNTO 0);
 		op : IN std_logic_vector(4 DOWNTO 0);
+		a, b, c : IN std_logic_vector(15 DOWNTO 0);
 		x ,y, z : OUT std_logic_vector(15 DOWNTO 0)
 	);
 end entity execution;

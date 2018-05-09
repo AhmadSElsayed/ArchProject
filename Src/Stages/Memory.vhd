@@ -7,8 +7,8 @@ use work.constants.all;
 
 entity MemoryUnit is
 	port (
-		a, b, c : in std_logic_vector(15 downto 0);
 		op: in std_logic_vector(4 downto 0);
+		a, b, c : in std_logic_vector(15 downto 0);
 		x, y, z: out std_logic_vector(15 downto 0)
 	);
 end MemoryUnit ;
@@ -19,10 +19,7 @@ type mem is array (1023 downto 0) of std_logic_vector(15 downto 0);
 signal memory: mem;
 signal StackPointer : std_logic_vector(9 downto 0) := "1111111111";
 -------------------------------------- 
-
-
 begin	
-
 process(op)
 	begin
 		case op is

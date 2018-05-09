@@ -7,7 +7,7 @@ entity PC is
 	port(
 		clock, mode: in std_logic;
 		PC: out std_logic_vector(9 downto 0);
-		data : inout std_logic_vector(15 downto 0)
+		data : inout std_logic_vector(9 downto 0)
 	);
 end PC;
 
@@ -16,9 +16,10 @@ signal address : std_logic_vector(9 downto 0);
 begin
 	process(clock)
 	begin
-		if(rising_edge(clock)) then 
+		if rising_edge(clock) and mode = '0' then 
 			address <= address + 1;
-		--elsif falling_edge(clock) then
+		elsif rising_edge(clock) and mode = '1' then
+			address <= data;
 		end if;
 	end process;
 	pc <= address;
