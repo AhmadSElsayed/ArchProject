@@ -1,0 +1,91 @@
+{C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd} {2 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package Constants
+-- Compiling entity Decoder
+-- Compiling architecture NoHazards of Decoder
+** Warning: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd(98): (vcom-1272) Length of expected is 16; length of slice name is 10.
+** Warning: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd(99): (vcom-1272) Length of expected is 16; length of slice name is 10.
+** Warning: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd(100): (vcom-1272) Length of expected is 16; length of slice name is 4.
+** Warning: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Decoder.vhd(101): (vcom-1272) Length of expected is 16; length of slice name is 4.
+
+} {} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Processor.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Processor.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+** Error (suppressible): C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Processor.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Utils/Constants.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Utils/Constants.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling package Constants
+
+} {} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/WriteBack.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/WriteBack.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+** Error (suppressible): C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/WriteBack.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package Constants
+-- Compiling entity execution
+-- Compiling architecture execute of execution
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(27): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(28): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(29): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(30): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(31): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(32): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(33): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(34): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(35): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(36): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(37): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(38): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(39): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(40): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(41): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(42): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(43): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(44): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(45): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(46): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(47): near ";": syntax error
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(48): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(49): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(50): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(51): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(52): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(53): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(54): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(55): (vcom-1136) Unknown identifier "OPCODE_ERRO".
+** Error (suppressible): C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(55): (vcom-1937) Choice in CASE statement alternative must be locally static.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(55): near "z": (vcom-1576) expecting ';'.
+** Error: C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Execution.vhd(58): VHDL Compiler exiting
+
+} {12.0 41.0 42.0 44.0} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Memory.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Memory.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+** Error (suppressible): C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Memory.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}} {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Fetcher.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Fetcher.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6c Compiler 2017.07 Jul 26 2017
+-- Loading package STANDARD
+** Error (suppressible): C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Src/Stages/Fetcher.vhd(1): (vcom-1491) Empty source files.
+
+} {} {}}

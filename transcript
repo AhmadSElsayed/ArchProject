@@ -1,0 +1,71 @@
+project open Project
+# Project file C:/Users/Ahmad Elsayed/Desktop/Pipelined/Correct/Project.mpf was not found.
+# Unable to open project.
+project open Project/Architecture.mpf
+# reading modelsim.ini
+# Loading project Architecture
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd failed with 1 errors.
+# Compile of Decoder.vhd failed with 5 errors.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 7 failed with 106 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd failed with 1 errors.
+# Compile of Decoder.vhd failed with 5 errors.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 7 failed with 106 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd failed with 5 errors.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 6 failed with 105 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd failed with 38 errors.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 6 failed with 138 errors.
+# Compile of Decoder.vhd failed with 38 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd failed with 6 errors.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 6 failed with 106 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd was successful with warnings.
+# Compile of Execution.vhd failed with 96 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 5 failed with 100 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd was successful with warnings.
+# Compile of Execution.vhd failed with 34 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 5 failed with 38 errors.
+# Compile of Processor.vhd failed with 1 errors.
+# Compile of Constants.vhd was successful.
+# Compile of Decoder.vhd was successful with warnings.
+# Compile of Execution.vhd failed with 32 errors.
+# Compile of Fetcher.vhd failed with 1 errors.
+# Compile of Memory.vhd failed with 1 errors.
+# Compile of WriteBack.vhd failed with 1 errors.
+# 7 compiles, 5 failed with 36 errors.
