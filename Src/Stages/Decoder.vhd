@@ -10,8 +10,7 @@ entity Decoder is
 		Instruction :in std_logic_vector(15 downto 0);
 		OpCode: out std_logic_vector(4 downto 0);
 		RegisterSourceAddress, RegisterDestAddress: out std_logic_vector(02 downto 0);
-		RegisterDestValue, extras: out std_logic_vector(15 downto 0)
-
+		z: out std_logic_vector(15 downto 0)
 	);
 end Decoder;
 
@@ -93,14 +92,16 @@ begin
 	else	Instruction(06 downto 04) when Instruction(15 downto 10) = "111000" -- RRC
 	else	"XXX";
 
-	extras <=
+	z <=
 			-- when Instruction(15 downto 13) = "000" -- LDM
-			Instruction(9 downto 0) when Instruction(15 downto 13) = "001" -- LDD
-	else	Instruction(9 downto 0) when Instruction(15 downto 13) = "010" -- STD
-	else	Instruction(6 downto 3) when Instruction(15 downto 10) = "110000" -- SHL
-	else	Instruction(6 downto 3) when Instruction(15 downto 10) = "110001" -- SHR
+			"000000" & Instruction(9 downto 0) when Instruction(15 downto 13) = "001" -- LDD
+	else	"000000" & Instruction(9 downto 0) when Instruction(15 downto 13) = "010" -- STD
+	else	"000000000000" & Instruction(6 downto 3) when Instruction(15 downto 10) = "110000" -- SHL
+	else	"000000000000" & Instruction(6 downto 3) when Instruction(15 downto 10) = "110001" -- SHR
 	else	"0000000000000001" when Instruction(15 downto 07) = "111111000" -- JZ
 	else	"0000000000000001" when Instruction(15 downto 07) = "111111001" -- JN
 	else	"0000000000000001" when Instruction(15 downto 07) = "111111010" -- JC
 	else (others => 'X');
+
+
 end architecture; -- NoHazards

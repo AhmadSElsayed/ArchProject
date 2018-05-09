@@ -21,7 +21,7 @@ begin
 		case op is 
 			when OPCODE_MOV => RegisterValue1 <= a; operation <= "010";
 			when OPCODE_ADD => RegisterValue1 <= a; operation <= "010";
-			when OPCODE_MUL => RegisterValue1 <= a; RegisterValue2 <= b; operation <= "011";
+			when OPCODE_MUL => RegisterValue1 <= a; RegisterValue2 <= b operation <= "011";
 			when OPCODE_SUB => RegisterValue1 <= a; operation <= "010";
 			when OPCODE_AND => RegisterValue1 <= a; operation <= "010";
 			when OPCODE_OR => RegisterValue1 <= a; operation <= "010";
