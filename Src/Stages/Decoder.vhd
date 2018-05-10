@@ -9,14 +9,15 @@ entity Decoder is
 	port(
 		Instruction :in std_logic_vector(15 downto 0);
 		OpCode: out std_logic_vector(4 downto 0);
-		RegisterSourceAddress, RegisterDestAddress: out std_logic_vector(02 downto 0);
+		RegisterSourceAddress, RegisterDestAddress, operation: out std_logic_vector(02 downto 0);
 		z: out std_logic_vector(15 downto 0)
 	);
 end Decoder;
 
 architecture NoHazards of Decoder is
-begin
-	OpCode <= 
+signal temp : std_logic_vector(4 downto 0);
+	begin
+	temp <= 
 			OPCODE_LDM when Instruction(15 downto 13) = "000" -- LDM
 	else	OPCODE_LDD when Instruction(15 downto 13) = "001" -- LDD
 	else	OPCODE_STD when Instruction(15 downto 13) = "010" -- STD
@@ -49,6 +50,8 @@ begin
 	else	OPCODE_RTI when Instruction(15 downto 07) = "111111110" -- RTI
 	else	OPCODE_NOP when Instruction(15 downto 07) = "111111111" -- NOP
 	else	OPCODE_ERROR;
+
+	OpCode <= temp;
 
 	RegisterDestAddress <= 
 			Instruction(12 downto 10) when Instruction(15 downto 13) = "000" -- LDM
@@ -103,5 +106,42 @@ begin
 	else	"0000000000000001" when Instruction(15 downto 07) = "111111010" -- JC
 	else (others => 'X');
 
-
+	process (temp, Instruction)
+	begin
+		case temp is
+			when OPCODE_NOP		=> operation <= "100";
+			when OPCODE_MOV		=> operation <= "001";
+			when OPCODE_ADD		=> operation <= "001";
+			when OPCODE_MUL		=> operation <= "001";
+			when OPCODE_SUB		=> operation <= "001";
+			when OPCODE_AND		=> operation <= "001";
+			when OPCODE_OR		=> operation <= "001";
+			when OPCODE_RLC		=> operation <= "000";
+			when OPCODE_RRC		=> operation <= "000";
+			when OPCODE_SHL		=> operation <= "001";
+			when OPCODE_SHR		=> operation <= "001";
+			when OPCODE_SETC	=> operation <= "100";
+			when OPCODE_CLRC	=> operation <= "100";
+			when OPCODE_PUSH	=> operation <= "000";
+			when OPCODE_POP		=> operation <= "000";
+			when OPCODE_OUT		=> operation <= "000";
+			when OPCODE_IN		=> operation <= "000";
+			when OPCODE_NOT		=> operation <= "000";
+			when OPCODE_NEG		=> operation <= "000";
+			when OPCODE_INC		=> operation <= "000";
+			when OPCODE_DEC		=> operation <= "000";
+			when OPCODE_JZ		=> operation <= "000";
+			when OPCODE_JN		=> operation <= "000";
+			when OPCODE_JC		=> operation <= "000";
+			when OPCODE_JMP		=> operation <= "000";
+			when OPCODE_CALL	=> operation <= "000";
+			when OPCODE_RET		=> operation <= "100";
+			when OPCODE_RTI		=> operation <= "100";
+			when OPCODE_LDM		=> operation <= "100";
+			when OPCODE_LDD		=> operation <= "100";
+			when OPCODE_STD		=> operation <= "000";
+			when OPCODE_ERROR	=> operation <= "100";
+			when others => operation <= "100";
+		end case;
+	end process;
 end architecture; -- NoHazards

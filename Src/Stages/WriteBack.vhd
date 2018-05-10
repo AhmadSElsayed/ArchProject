@@ -8,7 +8,7 @@ use work.constants.all;
 entity WriteBack is
 	port(
 		op : in std_logic_vector(4 downto 0);
-		a, b, c: in std_logic_vector(15 downto 0);
+		a, b: in std_logic_vector(15 downto 0);
 		operation: out std_logic_vector(2 downto 0); -- 000 read 1 -- 001 read 2 -- 010 -write 1 -- 011 write 2
 		RegisterValue1, RegisterValue2 : out std_logic_vector(15 downto 0)
 	);
@@ -16,7 +16,7 @@ end WriteBack;
 
 architecture NoHazards of WriteBack is
 begin
-	process(a,b,c,op)
+	process(a,b,op)
 	begin
 		case op is 
 			when OPCODE_MOV => RegisterValue1 <= a; operation <= "010";
