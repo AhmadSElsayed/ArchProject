@@ -22,9 +22,10 @@ signal bufferde :std_logic_vector(58 downto 0);
 signal bufferem :std_logic_vector(58 downto 0);
 signal buffermw :std_logic_vector(58 downto 0);
 
+signal pcload : std_logic_vector(9 downto 0);
 begin
 -- Components
-PC: entity PC port map(clock, '0', PC, (others => 'Z'));
+P: entity work.PC port map(clock, '0', PC, pcload);
 RegisterFile: entity RegisterFile port map();
 -- Stages
 Fetcher: entity Fetcher port map(PC, Instruction);

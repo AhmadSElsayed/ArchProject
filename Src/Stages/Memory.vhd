@@ -15,7 +15,7 @@ end MemoryUnit ;
 
 architecture NoHazards of MemoryUnit is
 ------------------------------------- RAM declaration 
-type mem is array (1023 downto 0) of std_logic_vector(15 downto 0);
+type mem is array (0 to 1023) of std_logic_vector(15 downto 0);
 signal memory: mem;
 signal StackPointer : std_logic_vector(9 downto 0) := "1111111111";
 -------------------------------------- 

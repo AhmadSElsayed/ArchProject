@@ -11,7 +11,7 @@ entity Fetcher is
 end Fetcher;
 
 architecture NoHazards of Fetcher is
-type mem is array (1023 downto 0) of std_logic_vector(15 downto 0);
+type mem is array (0 to 1032) of std_logic_vector(15 downto 0);
 signal memory: mem;
 begin
 
