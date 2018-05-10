@@ -20,7 +20,7 @@ signal memory: mem;
 signal StackPointer : std_logic_vector(9 downto 0) := "1111111111";
 -------------------------------------- 
 begin	
-process(op)
+process(op, a, b, c)
 	begin
 		case op is
 		when OPCODE_LDD => x <= memory(conv_integer(c(9 downto 0))) ; 

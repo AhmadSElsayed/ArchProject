@@ -13,7 +13,7 @@ entity PipeBuffer is
 end PipeBuffer;
 
 architecture NoHazards of PipeBuffer is
-signal d : std_logic_vector(n-1 downto 0);
+signal d : std_logic_vector(n-1 downto 0) := (others => '0');
 begin
 	process(clock)
 	begin

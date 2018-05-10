@@ -27,16 +27,16 @@ signal pcload : std_logic_vector(9 downto 0);
 begin
 -- Components
 P: entity work.PC port map(clock, '0', PC, pcload);
-Handler : entity work.Handler port map (operation, operation2, RegisterSourceAddress, RegisterDestAddress, RegisterSourceValue, RegisterDestValue, RegisterSourceAddress1, RegisterDestAddress1, RegisterSourceValue1, RegisterDestValue1);
+Handler : entity work.Handler port map (clock, operation, operation2, RegisterSourceAddress, RegisterDestAddress, RegisterSourceValue, RegisterDestValue, RegisterSourceAddress1, RegisterDestAddress1, RegisterSourceValue1, RegisterDestValue1);
 -- Stages
 Fetcher: entity work.Fetcher port map(PC, Instruction);
 BufferF_D: entity work.PipeBuffer generic map(16) port map(clock, Instruction, Instruction1);
 Decoder: entity work.Decoder port map(Instruction1, opcode, RegisterSourceAddress, RegisterDestAddress, operation, extras);
-BufferD_E: entity work.PipeBuffer generic map(58) port map(clock, bufferde0, bufferde);
+BufferD_E: entity work.PipeBuffer generic map(59) port map(clock, bufferde0, bufferde);
 Execution: entity work.Execution port map(bufferde(58 downto 54), bufferde(50 downto 35), bufferde(31 downto 16), bufferde(15 downto 0), x, y, z);
-BufferE_M: entity work.PipeBuffer generic map(58) port map(clock, bufferem0, bufferem);
+BufferE_M: entity work.PipeBuffer generic map(59) port map(clock, bufferem0, bufferem);
 Memory: entity work.MemoryUnit port map(bufferem(58 downto 54), bufferem(50 downto 35), bufferem(31 downto 16), bufferem(15 downto 0), x1, y1, z1);
-BufferM_W: entity work.PipeBuffer generic map(58) port map(clock, buffermw0, buffermw);
+BufferM_W: entity work.PipeBuffer generic map(59) port map(clock, buffermw0, buffermw);
 WriteBack: entity work.WriteBack port map(buffermw(58 downto 54), buffermw(50 downto 35), buffermw(31 downto 16), operation2, RegisterSourceValue1, RegisterDestValue1);
 
 bufferde0 <= opcode & RegisterSourceAddress & RegisterSourceValue & RegisterDestAddress & RegisterDestValue & extras;

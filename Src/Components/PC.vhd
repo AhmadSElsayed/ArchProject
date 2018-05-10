@@ -12,7 +12,7 @@ entity PC is
 end PC;
 
 architecture NoHazards of PC is
-signal address : std_logic_vector(9 downto 0);
+signal address : std_logic_vector(9 downto 0)  := (others => '0');
 begin
 	process(clock)
 	begin

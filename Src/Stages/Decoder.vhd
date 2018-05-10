@@ -53,7 +53,7 @@ signal temp : std_logic_vector(4 downto 0);
 
 	OpCode <= temp;
 
-	RegisterDestAddress <= 
+	RegisterSourceAddress <= 
 			Instruction(12 downto 10) when Instruction(15 downto 13) = "000" -- LDM
 	else	Instruction(12 downto 10) when Instruction(15 downto 13) = "001" -- LDD
 	else	Instruction(12 downto 10) when Instruction(15 downto 13) = "010" -- STD
@@ -82,7 +82,7 @@ signal temp : std_logic_vector(4 downto 0);
 	else	Instruction(06 downto 04) when Instruction(15 downto 07) = "111111100" -- CALL
 	else	"XXX";
 	
-	RegisterSourceAddress <= 
+	RegisterDestAddress <= 
 			Instruction(09 downto 07) when Instruction(15 downto 12) = "1010" -- MOV
 	else	Instruction(02 downto 00) when Instruction(15 downto 10) = "110000" -- SHL
 	else	Instruction(02 downto 00) when Instruction(15 downto 10) = "110001" -- SHR
