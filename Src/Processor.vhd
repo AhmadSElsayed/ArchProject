@@ -27,7 +27,7 @@ signal pcload : std_logic_vector(9 downto 0);
 begin
 -- Components
 P: entity work.PC port map(clock, '0', PC, pcload);
-Handler : entity work.Handler port map (operation, operation2, RegisterSourceValue, RegisterDestValue, RegisterSourceValue1, RegisterDestValue1);
+Handler : entity work.Handler port map (operation, operation2, RegisterSourceAddress, RegisterDestAddress, RegisterSourceValue, RegisterDestValue, RegisterSourceAddress1, RegisterDestAddress1, RegisterSourceValue1, RegisterDestValue1);
 -- Stages
 Fetcher: entity work.Fetcher port map(PC, Instruction);
 BufferF_D: entity work.PipeBuffer generic map(16) port map(clock, Instruction, Instruction1);
@@ -42,5 +42,7 @@ WriteBack: entity work.WriteBack port map(buffermw(58 downto 54), buffermw(50 do
 bufferde0 <= opcode & RegisterSourceAddress & RegisterSourceValue & RegisterDestAddress & RegisterDestValue & extras;
 bufferem0 <= bufferde(58 downto 54) & bufferde(53 downto 51) & x & bufferde(34 downto 32) & y & z;
 buffermw0 <= bufferem(58 downto 54) & bufferem(53 downto 51) & x1 & bufferem(34 downto 32) & y1 & z1;
+RegisterSourceAddress1 <= buffermw(53 downto 51);
+RegisterDestAddress1 <= buffermw(34 downto 32);
 
 end architecture;
